@@ -62,4 +62,4 @@ git push origin feature/AmazingFeature.
 
 Distributed under the MIT license. For more information, see LICENSE.
 
-Made with ❤️ by the Leonix team
+## Made with ❤️ by the Leonix team
