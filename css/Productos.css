@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+body {
+    font-family: "Fredoka", sans-serif;
+
+    margin: 0;
+    padding: 0;
+  
+    background-image: url("/img/2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+                                                                            /* *HEADER */
+header {
+    display: flex;
+    justify-content: center;
+  
+    background-color: #000000; /* *Colores*/
+    color: white;
+  
+    padding: 5px; /* ?Relleno */
+}
+
+                                                                        /* *HEADER ~ STYLES */
+#header__logo {
+    width: 60px; 
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+#header__logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2); 
+  }
+  
+#header__logo:active {
+    transform: scale(0.95); 
+  }
+  
+#gif-container {
+    position: absolute; 
+    bottom: -157px; 
+    left: 10px; 
+    display: none; 
+  }
+  
+#gif {
+    width: 200px; 
+    height: auto;
+  }
+
+.filtros {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    
+}
+
+.filtros label {
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 5px;
+
+    color: #FFFFF0;
+    text-shadow: 0px 0px 39px #FFD700; 
+}
+
+.filtros select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 180px; 
+
+    border: 2px solid #FFD700;
+    background: linear-gradient(45deg, #222, #555);
+    color: #FFFFF0;
+
+    appearance: none; 
+    background-image: linear-gradient(45deg, transparent 50%, #FFFFF0 50%), linear-gradient(135deg, #FFD700 50%, transparent 50%);
+    background-position: calc(100% - 15px) calc(1.1em), calc(100% - 10px) calc(1.1em);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+
+    transition: all 0.3s ease;
+    font-size: 1em;
+}
+
+.filtros select:hover {
+    border-color: #FFFFF0;
+}
+
+.filtros select:focus {
+    outline: none;
+    border-color: #FFFFF0;
+    background-color: #FFFFF0;
+    box-shadow: 0 0 20px #FFFFF0; 
+    color: #000;
+}
+
+.filtros select option {
+    background-color: #222;
+    color: #fff;
+}
+
+#button-style2 {
+    position: absolute;
+    top: 1;
+    right: 20px;
+    padding: 8px 9px;
+
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+
+    color: #FFFFF0;
+    background-color: #ff000000;
+
+    box-shadow: 0 4px 0 #FFFFF0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+#button-style2:hover {
+    filter: brightness(1.2); 
+    color: #ffffff;
+  }
+  
+#button-style2:active {
+    transform: translateY(4px); 
+    box-shadow: 0 2px 0 #FFFFF0;
+    border: 2px solid #FFFFF0;
+    color: #ffffff;
+  } 
+
+
+                                                                        /* *MAIN */
+
+main {
+    display: flex;
+    padding: 20px;
+}
+                                                                        /* *TARJETAS */
+#productos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+
+    justify-content: center;
+
+    gap: 20px ;
+    padding: 10px;
+    width: 90%;
+}
+
+.producto {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    text-align: center;
+
+    padding: 15px;
+    width: 100%;
+    max-width: 200px; 
+    border-radius: 6px;
+ 
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #FFFFF0;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.979);
+    border: 2px solid #FFD700;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.producto:hover img { 
+    transform: translateY(-10px) scale(1.1); 
+}
+
+.producto h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #2F2F2F;
+}
+
+.producto p {
+    margin: 5px 0;
+    color: #575757;
+}
+                                                                        /* *Detalles de los productos */
+#producto-detalles {
+    color: #1C1C1C;
+    width: 25%;
+    background-color: #FFFFF0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    border-radius: 5px;
+
+}
+
+#producto-detalles.oculto {
+    display: none;
+}
+
+#producto-detalles img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+#producto-detalles:hover img { 
+    transform: translateY(-10px) scale(1.1); 
+}
+
+#producto-detalles h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+#producto-detalles p {
+    margin: 5px 0;
+    color: #575757;
+}
+
+#producto-detalles input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+                                                                        /* *Botones de producto-detalles */
+
+#boton-contenedor {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+    margin-top: 10px;
+
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+}
+
+#producto-detalles button {
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 6px;
+}
+
+#producto-detalles .btn-comprar {
+    padding: 7px 20px;
+    background-color: #1C1C1C;
+    border-radius: 10px;
+    box-shadow: 0 4px 0 #cfb000;
+
+}
+
+#producto-detalles .btn-comprar:hover {
+    background-color: #ffd900;
+    transform: scale(1.05); 
+    font-weight: bold;
+}
+
+#producto-detalles .btn-comprar:active {
+    transform: translateY(4px); 
+    box-shadow: 0 2px 0 #FFD700; 
+}  
+
+#producto-detalles .btn-cancelar {
+    padding: 8px 21px;
+    background-color: #1C1C1C;
+    border-radius: 10px;
+    box-shadow: 0 4px 0 #b83100;
+
+}
+
+#producto-detalles .btn-cancelar:hover { 
+    background-color: #ff4400;
+    transform: scale(1.05); 
+    font-weight: bold;
+
+    }
+
+#producto-detalles .btn-cancelar:active { 
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #FF4500; 
+} 
+
+                                                                        /* *FOOTER */
+#footer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+  
+    background-color: #000000; 
+    color: white;
+  
+    width: 94%; /* ?Ancho */
+    padding: 10px 40px; /* ?Relleno */
+    cursor: pointer;
+}
+
+                                                            /* *FOOTER ~ STYLES */
+.footer__style {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer__style:hover {
+    color: #ffb60f; /*#1abc9c Turquesa*/
+    transform: scale(1.05);
+}
+
+#footer__logo {
+    width: 180px;
+    height: auto;
+    transition: transform 0.3s ease; 
+}
+
+#footer__left:hover #footer__logo {
+    transform: scale(1.1); 
+}
+
+
+
+
