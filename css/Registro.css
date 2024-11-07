@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
 
-      /* *BODY -> [Header | Main (Form) | Footer] */
-
+/* *BODY -> [Header | Main (Form) | Footer] */
 body {
   font-family: "Fredoka", sans-serif;
 
@@ -15,20 +14,19 @@ body {
   background-attachment: fixed;
 }
 
-      /* *HEADER 🧠 */
+/* *HEADER 🧠 */
 
 header {
-    display: flex;
-    justify-content: center;
-  
-    background-color: #000000; /* *Colores*/
-  
-    padding: 5px; /* ?Relleno */
+  display: flex;
+  justify-content: center;
+
+  padding: 5px;  /* ?Relleno */
+  background-color: #000000;
 }
 
-      /* *HEADER ~ STYLES */
+/* *HEADER ~ STYLES */
 #header__logo {
-  width: 60px; 
+  width: 60px;
   height: auto;
   transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
@@ -36,27 +34,26 @@ header {
 
 #header__logo:hover {
   transform: scale(1.1);
-  filter: brightness(1.2); 
+  filter: brightness(1.2);
 }
 
 #header__logo:active {
-  transform: scale(0.95); 
+  transform: scale(0.95);
 }
 
 #gif-container {
-  position: absolute; 
-  bottom: -164px; 
-  left: 0px; 
-  display: none; 
+  position: absolute;
+  bottom: -164px;
+  left: 0px;
+  display: none;
 }
 
 #gif {
-  width: 200px; 
+  width: 200px;
   height: auto;
 }
 
-
-      /* *MAIN 🧥*/
+/* *MAIN 🧥*/
 
 main {
   display: flex;
@@ -64,24 +61,24 @@ main {
   padding: 50px;
 }
 
-      /* *FORM📋 */
+/* *FORM📋 */
 
 .form__container {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 
-  gap: 10px; 
-  padding: 30px; 
+  gap: 10px;
+  padding: 30px;
   width: 480px;
 
   color: #000000;
-  background-color: #ffffff; 
+  background-color: #ffffff;
 
   border-radius: 6px;
   box-shadow: 0 2px 10px rgba(19, 7, 7, 0.767);
 }
 
-      /* *FORM STYLES*/
+/* *FORM STYLES*/
 
 .form__container label {
   font-weight: bold;
@@ -95,20 +92,20 @@ main {
 }
 
 .radio-container {
-    display: flex;
-    justify-content: space-around; 
-    align-items: center; 
-    gap: 20px; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
 }
 
 .radio-group {
-    display: flex;
-    align-items: center;
-    gap: 20px; 
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .radio-group label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .form__container button {
@@ -116,18 +113,18 @@ main {
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #button-style {
+  font-size: 15px;
+  border: none;
+
   color: #1a4200;
   background-color: #9cee69;
   box-shadow: 0 4px 0 #1a4200;
 
-  border: none;
-  font-size: 15px;
-  transition: background-color 0.3s ease, box-shadow 0.2s ease, transform 0.2s ease; /* Añade las transiciones */
-  
+  transition: background-color 0.3s ease, box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 #button-style:hover {
@@ -135,40 +132,41 @@ main {
 }
 
 #button-style:active {
-    transform: translateY(4px); 
-    box-shadow: 0 2px 0 #1a4200; 
-}  
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #1a4200;
+}
 
 #button-style2 {
+  font-size: 15px;
+
   color: black;
   border: 1px solid #464646;
-  box-shadow: 0 4px 0 #464646; 
-  
-  transition: background-color 0.3s ease, box-shadow 0.2s ease, transform 0.2s ease;
-  font-size: 15px;
-  
+  box-shadow: 0 4px 0 #464646;
+
+  transition: background-color 0.3s ease, box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
 #button-style2:hover {
   background-color: #000000;
-  color: white;
   border: 2px solid #464646;
+  color: white;
 }
 
 #button-style2:active {
-  transform: translateY(4px); 
-  box-shadow: 0 2px 0 #464646
-}  
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #464646;
+}
 
 /* *FOOTER 👟 */
 
 #footer {
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
 
-  background-color: #000000; 
-  color: #FFFFF0;
+  background-color: #000000;
+  color: #fffff0;
 
   width: 94%; /* ?Ancho */
   padding: 4px 40px; /* ?Relleno */
@@ -182,7 +180,8 @@ main {
 }
 
 .footer__style:hover {
-  color: #ffb60f; /*#1abc9c Turquesa*/
+  color: #ffb60f;
+  /*#1abc9c Turquesa*/
   transform: scale(1.05);
 }
 
