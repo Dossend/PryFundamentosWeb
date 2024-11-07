@@ -9,6 +9,8 @@ const calzado = [
     { nombre: "Guayos Nike Mercurial Terreno Firme", cantidadDisponible: 18, precio: 190000, img: "https://unitedstorecolombia.com/cdn/shop/products/45c5f2a3.jpg?v=1680382937&width=713", codigo: "GT-NK-MR-2024", categoria: "Terreno Firme", disponibilidad: "En existencia" },
     { nombre: "Guayos Puma Future Terreno Firme", cantidadDisponible: 0, precio: 300000, img: "https://unitedstorecolombia.com/cdn/shop/files/b5aef134.jpg?v=1694020219&width=713", codigo: "GT-PM-FT-2024", categoria: "Terreno Firme", disponibilidad: "Agotado" },
     { nombre: "Guayos Copa Mundo Terreno Firme", cantidadDisponible: 20, precio: 330000, img: "https://unitedstorecolombia.com/cdn/shop/files/335193fb.jpg?v=1712166935&width=713", codigo: "GT-CP-MD-2024", categoria: "Terreno Firme", disponibilidad: "En existencia" },
+    { nombre: "Guayo Adidas Speed Portal Terreno Firme", cantidadDisponible: 8, precio: 310000, img: "https://unitedstorecolombia.com/cdn/shop/files/3d6cb360.jpg?v=1683908076&width=713", codigo: "GT-AD-SP-2024", categoria: "Terreno Firme", disponibilidad: "En existencia" },
+
     
     // Categoría Sintética
     { nombre: "Guayos Nike Air Zoom Pasto Sintético", cantidadDisponible: 8, precio: 170000, img: "https://unitedstorecolombia.com/cdn/shop/files/4a8eafed.jpg?v=1696370353&width=713", codigo: "GS-NK-AZ-2024", categoria: "Sintética", disponibilidad: "En existencia" },
