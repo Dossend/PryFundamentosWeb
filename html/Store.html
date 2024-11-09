@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leoníx ♦ Store</title>
+    <link rel="icon" href="/img/Isotipo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Khula:700" />
+    <link rel="stylesheet" href="/css/Store.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="filtros">
+        <select id="filtro-categoria">
+          <option value="todos">Todos</option>
+          <option value="Terreno Firme">Terreno Firme</option>
+          <option value="Sintética">Pasto Sintético</option>
+          <option value="Cancha Cubierta">Cancha Cubierta</option>
+        </select>
+        <label for="filtro-categoria">♦ Categoría ♦</label>
+
+        <audio id="music" loop>
+          <source src="/music/Soundtrack.mp3" type="audio/mpeg" />
+        </audio>
+
+        <div id="gif-container">
+          <img src="/img/ronaldihnoGif.gif" alt="Gif" id="gif" />
+        </div>
+
+        <img src="/img/Isotipo.png" alt="Logo" id="header__logo" onclick="playAudio()"/>
+
+        <label for="filtro-disponibilidad">♦ Disponibilidad ♦ </label>
+        <select id="filtro-disponibilidad">
+          <option value="todos">Todos</option>
+          <option value="En existencia">En existencia</option>
+          <option value="Agotado">Agotado</option>
+        </select>
+
+        <button id="button-style2" type="reset" onclick="resetFilters()"> Limpiar flitros </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="productos-container" class="productos"></section>
+      <div id="request-target"></div>
+     <!-- <div class="spinner"></div> -->
+
+      <aside id="producto-detalles" class="oculto"></aside>
+    </main>
+
+    <!-- *FOOTER* -->
+    <footer id="footer">
+      <div id="footer__left">
+        <img src="/img/Imagotipo.png" alt="Logo" id="footer__logo" />
+      </div>
+
+      <div id="footer__center" class="footer__style">
+        <p>
+          Términos y condiciones | Política de Privacidad | Superintendencia
+        </p>
+      </div>
+
+      <div id="footer__right" class="footer__style">
+        <p>&copy; 2024 Leonix S.A.S.</p>
+      </div>
+    </footer>
+    <script src="/js/data.js"></script>
+    <script src="/js/Store.js"></script>
+  </body>
+</html>
