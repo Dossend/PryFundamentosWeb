@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leoníx ♦ Shopping Cart</title>
+  <link rel="icon" href="/img/Isotipo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Khula:700">
+  <link rel="stylesheet" href="/css/shoppingCart.css">
+</head>
+
+<body>
+  <header id="header">
+    <img src="/img/Isotipo.png" alt="Logo" id="header__logo" onclick="playAudio()">
+
+    <audio id="music" loop>
+      <source src="/music/Soundtrack1.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="gif-container">
+      <img src="/img/ronaldihnoGif.gif" alt="Gif" id="gif">
+    </div>
+  </header>
+
+  <main>
+    <section class="carrito" id="productos-carrito">
+      <table id="tabla-carrito">
+        <thead>
+          <tr>
+            <th>Img</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Código</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+            <th class="th-eliminar" >Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se insertarán los productos del carrito mediante JavaScript -->
+        </tbody>
+      </table>
+
+      <div id="resumen-compra">
+        <h2>Resumen de la Compra</h2>
+        <p id="total-productos">Total de Productos: 0</p>
+        <p id="total-precio">Total del Precio: $0</p>
+        <p id="recargo-domicilio">Recargo por Domicilio: $0</p>
+        <button id="continuar-comprando">Continuar Comprando</button>
+        <button id="cancelar-compra">Cancelar Compra</button>
+      </div>
+
+    </section>
+
+    <aside id="detalles-pago">
+      <h3>Detalles de Pago</h3>
+      <form id="form-pago">
+
+        <label for="numero-tarjeta">Número de Tarjeta:</label>
+        <input type="text" id="numero-tarjeta" required pattern="\d{16}" title="Debe contener 16 dígitos">
+
+        <label for="fecha-expiracion">Fecha de Expiración:</label>
+        <input type="text" id="fecha-expiracion" required placeholder="MM/AA" pattern="\d{2}/\d{2}" title="Formato: MM/AA">
+
+        <label for="cvv">CVV:</label>
+        <div class="cvv-container">
+          <input type="password" id="cvv" required pattern="\d{3}" title="Debe contener 3 dígitos">
+          <span class="toggle-password" onclick="togglePassword()">👁️</span>
+        </div>
+
+        <label for="nombre-titular">Nombre del Titular:</label>
+        <input type="text" id="nombre-titular" required>
+
+        <label for="pais-emision">País de Emisión:</label>
+        <select id="pais-emision" required>
+          <option value="Colombia">Colombia</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Brasil">Brasil</option>
+          <option value="Chile">Chile</option>
+          <option value="Perú">Perú</option>
+          <option value="México">México</option>
+          <option value="Estados Unidos">Estados Unidos</option>
+          <option value="España">España</option>
+          <option value="Francia">Francia</option>
+          <option value="Alemania">Alemania</option>
+        </select>
+
+        <label for="tipo-tarjeta">Tipo de Tarjeta:</label>
+        <select id="tipo-tarjeta" required>
+          <option value="MasterCard">MasterCard</option>
+          <option value="Visa">Visa</option>
+          <option value="Prepagada">Prepagada</option>
+        </select>
+
+        <button type="reset">Limpiar Campos</button>
+        <button type="submit">Confirmar Compra</button>
+      </form>
+    </aside>
+    
+  </main>
+
+  <footer id="footer">
+    <div id="footer__left">
+      <img src="/img/Imagotipo.png" alt="Logo" id="footer__logo">
+    </div>
+    <div id="footer__center" class="footer__style">
+      <p>Términos y condiciones | Política de Privacidad | Superintendencia</p>
+    </div>
+    <div id="footer__right" class="footer__style">
+      <p>&copy; 2024 Leonix S.A.S.</p>
+    </div>
+  </footer>
+  <script src="/js/data.js"></script>
+  <script src="/js/shoppingCart.js"></script>
+</body>
+</html>
