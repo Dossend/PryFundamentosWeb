@@ -1,20 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Khula:700">
-    <link rel="stylesheet" href="/css/Style.css">
-</head>
-<body>
-    <div class="console-container">
-        
-        <span id="text"></span>
-        <div class="console-underscore" id="console">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leoníx ♦ Register</title>
+    <link rel="icon" href="/img/Isotipo.png" type="image/x-icon" />
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Khula:700"/>
+    <link rel="stylesheet" href="/css/Style.css" />
+  </head>
 
+  <body>
+    <header id="header">
+      <img
+        src="/img/Isotipo.png"
+        alt="Logo"
+        id="header__logo"
+        onclick="playAudio()"
+      />
+
+      <audio id="music" loop>
+        <source src="/music/Soundtrack1.mp3" type="audio/mpeg" />
+      </audio>
+
+      <div id="gif-container">
+        <img src="/img/ronaldihnoGif.gif" alt="Gif" id="gif" />
+      </div>
+    </header>
+
+    <main>
+      <form class="form__container">
+        <h2>Formulario de Registro 📋</h2>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" maxlength="20" />
+
+        <label for="precio">Precio:</label>
+        <input
+          type="text"
+          id="precio"
+          name="precio"
+          required
+          oninput="formatearNumero(this)"
+        />
+
+        <label for="cantidad">Cantidad de productos:</label>
+        <input
+          type="number"
+          id="cantidad"
+          name="cantidad"
+          min="1"
+          max="20"
+          required
+        />
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required />
+
+        <label class="main-label">Tipo de entrega:</label>
+
+        <div class="radio-container">
+          <div class="radio-group">
+            <input
+              type="radio"
+              id="domicilio"
+              name="entrega"
+              value="domicilio"
+              required
+            />
+            <label for="domicilio">Domicilio 🚚</label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              type="radio"
+              id="puntoFisico"
+              name="entrega"
+              value="puntoFisico"
+              required
+            />
+            <label for="puntoFisico">Punto Fisico 📍</label>
+          </div>
         </div>
-    </div>
+
+        <button id="button-style" type="button" onclick="Comprar()">
+          Comprar 🛒
+        </button>
+        <button id="button-style2" type="reset">Limpiar Campos</button>
+      </form>
+    </main>
+
+    <footer id="footer">
+      <div id="footer__left">
+        <img src="/img/Imagotipo.png" alt="Logo" id="footer__logo" />
+      </div>
+
+      <div id="footer__center" class="footer__style">
+        <p>
+          Términos y condiciones | Política de Privacidad | Superintendencia
+        </p>
+      </div>
+
+      <div id="footer__right" class="footer__style">
+        <p>&copy; 2024 Leonix S.A.S.</p>
+      </div>
+    </footer>
+
     <script src="/js/Script.js"></script>
-</body>
+  </body>
 </html>
