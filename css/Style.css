@@ -1,31 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+
+/* *BODY -> [Header | Main (Form) | Footer] */
 body {
-    background: #ebebeb;
-    margin: 0; 
+  font-family: "Fredoka", sans-serif;
+
+  margin: 0;
+  padding: 0;
+
+  color: #faebd7;
+  background-image: url("/img/Fondo.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.hidden {
-    opacity: 0;
+/* *HEADER 🧠 */
+
+header {
+  display: flex;
+  justify-content: center;
+
+  padding: 5px; /* ?Relleno */
+  background-color: #000000;
 }
 
-.console-container {
-    font-family: 'Khula', sans-serif;
-    font-size: 4em;
-    text-align: center;
-    height: 200px;
-    width: 600px;
-    display: block;
-    position: absolute;
-    color: rgb(0, 0, 0);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+/* *HEADER ~ STYLES */
+#header__logo {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
 }
 
-.console-underscore {
-    display: inline-block;
-    position: relative;
-    top: -0.14em;
-    left: 10px;
+#header__logo:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+#header__logo:active {
+  transform: scale(0.95);
+}
+
+#gif-container {
+  position: absolute;
+  bottom: -164px;
+  left: 0px;
+  display: none;
+}
+
+#gif {
+  width: 200px;
+  height: auto;
+}
+
+/* *MAIN 🧥*/
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+/* *FORM📋 */
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+  padding: 30px;
+  width: 480px;
+
+  color: #000000;
+  background-color: #ffffff;
+
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(19, 7, 7, 0.767);
+}
+
+/* *FORM STYLES*/
+
+.form__container label {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.form__container input {
+  height: 30px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.radio-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.radio-group label {
+  cursor: pointer;
+}
+
+.form__container button {
+  height: 30px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#button-style {
+  font-size: 15px;
+  border: none;
+
+  color: #1a4200;
+  background-color: #9cee69;
+  box-shadow: 0 4px 0 #1a4200;
+
+  transition: background-color 0.3s ease, box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+#button-style:hover {
+  background-color: #6cc832;
+}
+
+#button-style:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #1a4200;
+}
+
+#button-style2 {
+  font-size: 15px;
+
+  color: black;
+  border: 1px solid #464646;
+  box-shadow: 0 4px 0 #464646;
+
+  transition: background-color 0.3s ease, box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+#button-style2:hover {
+  background-color: #000000;
+  border: 2px solid #464646;
+  color: white;
+}
+
+#button-style2:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #464646;
+}
+
+/* *FOOTER 👟 */
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #000000;
+  color: #fffff0;
+
+  padding: 4px 40px; /* ?Relleno */
+  cursor: pointer;
+}
+
+/* *FOOTER ~ STYLES */
+
+.footer__style {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer__style:hover {
+  color: #ffb60f;
+  /*#1abc9c Turquesa*/
+  transform: scale(1.05);
+}
+
+#footer__logo {
+  width: 180px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+#footer__left:hover #footer__logo {
+  transform: scale(1.1);
 }
