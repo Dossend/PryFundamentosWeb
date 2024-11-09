@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+
+/* General Styles */
+html, body { 
+  height: 100%;
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+  flex-direction: column; 
+  font-family: "Fredoka", sans-serif; 
+  background-image: url("/img/Fondo.jpeg"); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #000;
+}
+
+#header__logo {
+  width: 60px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+#header__logo:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+#header__logo:active {
+  transform: scale(0.95);
+}
+
+#gif-container {
+  position: absolute;
+  bottom: -164px;
+  left: 0;
+  display: none;
+}
+
+#gif {
+  width: 200px;
+}
+
+/* Main Styles */
+main {
+  flex: 1;
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+#productos-carrito {
+  width: 70%;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.568);
+  border-radius: 2px;
+}
+
+table {
+  color: #1c1c1c;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table th {
+  color: white;
+  text-shadow: 0 0 1px #000;
+  background-color: #1cc4a2;
+}
+
+table th, table td {
+  font-weight: 400;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.th-eliminar {
+  color: white;
+  background-color: #2F2F2F;
+}
+
+.boton-eliminar {
+  padding: 8px 10px;
+  background-color: #ff4d4d; 
+  
+  color: #ffffff; 
+  border-radius: 2px;
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.boton-eliminar:hover {
+  background-color: #ff3939; 
+}
+
+.boton-eliminar:active {
+  background-color: #b63737; 
+}
+
+
+#resumen-compra {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#resumen-compra button {
+  margin-right: 10px;
+}
+
+#detalles-pago {
+  color: #1c1c1c;
+  width: 30%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#detalles-pago form {
+  margin-top: 20px;
+}
+
+#detalles-pago label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#detalles-pago input, #detalles-pago select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#detalles-pago .cvv-container {
+  position: relative;
+  display: flex;
+}
+
+#detalles-pago .cvv-container input {
+  flex: 1;
+}
+
+#detalles-pago .toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#detalles-pago button[type="reset"], #detalles-pago button[type="submit"] {
+  background-color: #28a745;
+  margin-right: 10px;
+}
+
+#detalles-pago button[type="reset"]:hover, #detalles-pago button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Footer Styles */
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #fffff0;
+  padding: 4px 40px;
+}
+
+.footer__style {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer__style:hover {
+  color: #ffb60f;
+  transform: scale(1.05);
+}
+
+#footer__logo {
+  width: 180px;
+  transition: transform 0.3s ease;
+}
+
+#footer__left:hover #footer__logo {
+  transform: scale(1.1);
+}
