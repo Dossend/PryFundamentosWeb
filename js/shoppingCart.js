@@ -162,17 +162,15 @@ function playAudio() {
   });
   
   actualizarCarrito();
-
+  
   document.getElementById('fecha-expiracion').addEventListener('input', function (e) {
-    let value = e.target.value.replace(/[^\d]/g, ''); // Remover cualquier carácter que no sea un número
-  
+    let value = e.target.value.replace(/[^\d]/g, ''); // Remover caracteres no numéricos
     if (value.length > 2) {
-      value = value.slice(0, 2) + '/' + value.slice(2); // Insertar una barra después de los dos primeros dígitos
+        value = value.slice(0, 2) + '/' + value.slice(2); // Insertar la barra después de los dos primeros dígitos
     }
-  
-    e.target.value = value.slice(0, 5); // Limitar la longitud a 5 caracteres
-  });
-  
+    e.target.value = value; // Mantener el valor actualizado sin limitar la longitud
+});
+
   
   function togglePassword() {
     const cvvInput = document.getElementById('cvv');

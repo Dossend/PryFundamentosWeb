@@ -179,12 +179,25 @@ table th, table td {
 }
 
 #detalles-pago button[type="reset"], #detalles-pago button[type="submit"] {
-  background-color: #28a745;
+  background-color: #000000;
+  border-radius: 4px;
   margin-right: 10px;
 }
 
-#detalles-pago button[type="reset"]:hover, #detalles-pago button[type="submit"]:hover {
-  background-color: #218838;
+#detalles-pago button[type="reset"]:hover {
+  background-color: #d69419;
+}
+
+#detalles-pago button[type="reset"]:active {
+  background-color: #b47d16;
+}
+
+#detalles-pago button[type="submit"]:hover {
+  background-color: #1cc4a2;
+}
+
+#detalles-pago button[type="submit"]:active {
+  background-color: #127c67;
 }
 
 button {
