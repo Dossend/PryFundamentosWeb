@@ -95,7 +95,6 @@ table th, table td {
   
   color: #ffffff; 
   border-radius: 2px;
-  cursor: pointer; 
   transition: background-color 0.3s ease; 
 }
 
@@ -107,24 +106,39 @@ table th, table td {
   background-color: #b63737; 
 }
 
-
 #resumen-compra {
-  margin-top: 20px;
-  background-color: #fff;
+  margin-top: 1px;
+  background-color: #ffffff;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #resumen-compra button {
   margin-right: 10px;
+  border-radius: 4px;
 }
 
+#continuar-comprando:hover {
+  background-color: #1cc4a2; 
+}
+
+#continuar-comprando:active {
+  background-color: #158b74; 
+}
+
+#cancelar-compra:hover {
+  background-color: #ff3939; 
+}
+
+#cancelar-compra:active {
+  background-color: #b63737; 
+}
 #detalles-pago {
   color: #1c1c1c;
   width: 30%;
-  background-color: #fff;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.568);
 }
 
 #detalles-pago form {
