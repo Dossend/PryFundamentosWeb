@@ -146,10 +146,10 @@ function playAudio() {
   }
   
   function calcularRecargoDomicilio(totalPrecio) {
-    const recargo = 5000; // Puedes ajustar el recargo según tus necesidades
-    return totalPrecio > 100000 ? 0 : recargo;
+    const recargo = 15000; 
+    return totalPrecio > 100000 ? 0 : recargo; // MODIFICAR ESTO Este valor se debe sumar al total del costo de la compra.
   }
-  
+
   document.getElementById('continuar-comprando').addEventListener('click', () => {
     window.location.href = '/html/Loader.html'; // Redirige al Loader con parámetro de redirección
 });
@@ -162,4 +162,29 @@ function playAudio() {
   });
   
   actualizarCarrito();
+
+  document.getElementById('fecha-expiracion').addEventListener('input', function (e) {
+    let value = e.target.value.replace(/[^\d]/g, ''); // Remover cualquier carácter que no sea un número
+  
+    if (value.length > 2) {
+      value = value.slice(0, 2) + '/' + value.slice(2); // Insertar una barra después de los dos primeros dígitos
+    }
+  
+    e.target.value = value.slice(0, 5); // Limitar la longitud a 5 caracteres
+  });
+  
+  
+  function togglePassword() {
+    const cvvInput = document.getElementById('cvv');
+    const toggleIcon = document.querySelector('.toggle-password');
+  
+    if (cvvInput.type === 'password') {
+      cvvInput.type = 'text';
+      toggleIcon.textContent = '🙈'; // Cambiar icono a "ocultar"
+    } else {
+      cvvInput.type = 'password';
+      toggleIcon.textContent = '👁️'; // Cambiar icono a "ver"
+    }
+  }
+  
   
