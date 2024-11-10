@@ -45,7 +45,7 @@
       <div id="resumen-compra">
         <h2>Resumen de la Compra</h2>
         <p id="total-productos">Total de Productos: 0</p>
-        <p id="total-precio">Total del Precio: $0</p>
+        <p id="total-precio">Costo Total: $0</p>
         <p id="recargo-domicilio">Recargo por Domicilio: $0</p>
         <button id="continuar-comprando">Continuar Comprando</button>
         <button id="cancelar-compra">Cancelar Compra</button>
@@ -58,14 +58,14 @@
       <form id="form-pago">
 
         <label for="numero-tarjeta">Número de Tarjeta:</label>
-        <input type="text" id="numero-tarjeta" required pattern="\d{16}" title="Debe contener 16 dígitos">
+        <input type="text" id="numero-tarjeta" required pattern="\d{16}" maxlength="16" title="Debe contener 16 dígitos">
 
         <label for="fecha-expiracion">Fecha de Expiración:</label>
-        <input type="text" id="fecha-expiracion" required placeholder="MM/AA" pattern="\d{2}/\d{2}" title="Formato: MM/AA">
+        <input type="text" id="fecha-expiracion" required placeholder="MM/AA" maxlength="5" pattern="\d{2}/\d{2}" title="Formato: MM/AA">
 
         <label for="cvv">CVV:</label>
         <div class="cvv-container">
-          <input type="password" id="cvv" required pattern="\d{3}" title="Debe contener 3 dígitos">
+          <input type="password" id="cvv" required pattern="\d{3}" maxlength="3" title="Debe contener 3 dígitos">
           <span class="toggle-password" onclick="togglePassword()">👁️</span>
         </div>
 
