@@ -157,7 +157,6 @@ main {
 }
 
 .producto {
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
   text-align: center;
 
   padding: 15px;
@@ -175,7 +174,7 @@ main {
 
 .producto:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(255, 215, 0, 0.979);
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.979);
   border: 2px solid #ffd700;
 }
 
